@@ -26,6 +26,11 @@ public class Tarefa {
     public boolean isConcluido(){
         return concluido;
     }
+    
+    //mETODO CRIADO PARA EDITAR DESCRICAO
+    public void setDescricao(String descricao){
+            this.descricao = descricao;
+    }
 
     public void setConcluido(boolean concluido){
 
