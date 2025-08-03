@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class GerenciadorDeTarefas {
 
     public static void main(String[] args) {
-        // CORREÇÃO 1: O nome da classe é "ServicoDeTarefas" (singular).
+        
         ServicoDeTarefas servico = new ServicoDeTarefas();
         Scanner scanner = new Scanner(System.in);
         int opcao = -1;
@@ -20,8 +20,6 @@ public class GerenciadorDeTarefas {
         while (opcao != 0) {
             exibirMenu();
             
-            // CORREÇÃO 2: A leitura da opção do menu é responsabilidade da interface.
-            // O try-catch fica aqui para tratar a entrada do menu principal.
             try {
                 System.out.print("Escolha uma opção: ");
                 opcao = scanner.nextInt();
@@ -32,7 +30,7 @@ public class GerenciadorDeTarefas {
                 scanner.nextLine(); // Limpa o buffer do scanner em qualquer caso.
             }
 
-            // CORREÇÃO 3: As chamadas agora são delegadas para o objeto "servico".
+            
             switch (opcao) {
                 case 1: servico.adicionarTarefa(scanner); break;
                 case 2: servico.listarTarefas(); break;
