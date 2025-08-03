@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-/**
- * CORREÇÃO 1: Nome da classe ajustado para o singular "ServicoDeTarefas".
- * Esta classe encapsula toda a lógica de negócio para gerenciar tarefas.
- */
+
 public class ServicoDeTarefas {
 
     private ArrayList<Tarefa> tarefas = new ArrayList<>();
@@ -23,7 +20,7 @@ public class ServicoDeTarefas {
         System.out.println("Tarefa adicionada com sucesso!");
     }
 
-    // Nome do método ajustado para o plural para maior clareza.
+
     public void listarTarefas() {
         System.out.println("\n--- Lista de Tarefas ---");
         if (this.tarefas.isEmpty()) {
@@ -74,7 +71,7 @@ public class ServicoDeTarefas {
             System.out.print("Digite a nova descrição da tarefa: ");
             String novaDescricao = scanner.nextLine();
             
-            // CORREÇÃO 4: Lógica de edição mais eficiente, modificando o objeto existente.
+        
             this.tarefas.get(indice).setDescricao(novaDescricao);
             
             System.out.println("Tarefa editada com sucesso!");
